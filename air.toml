@@ -1,0 +1,6 @@
+# air.toml
+
+# Add a custom build step for go generate
+[[builds]]
+cmd = "go generate"
+

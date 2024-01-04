@@ -1,0 +1,18 @@
+<nav
+  class="sticky top-0 left-0 w-screen h-20 flex justify-between items-center z-50 backdrop-filter backdrop-blur-md bg-opacity-75"
+>
+  <div class="{{.ContainerStyle}}">
+    <div class="h-1/2 flex justify-center align-mid">
+      <img src="{{.Logo}}" alt="Description of the image" height="46" />
+    </div>
+    {{range $index, $link := .NavLinks}}
+    <a href="{{$link.Href}}">{{$link.Text}}</a>
+    {{end}}
+  </div>
+
+  <div class="{{.ContainerStyle}}">
+    {{range $index, $button := .NavButtons}}
+    <button onclick="{{$button.OnButtonClick}}">{{$button.Text}}</button>
+    {{end}}
+  </div>
+</nav>

@@ -1,9 +1,5 @@
 const config = {
-  content: [
-    "./templates/**/*.tmpl",
-    "./templates/**/*.html",
-    "./templates/**/*.gohtml",
-  ],
+  content: ["./ui/**/*.tmpl", "./ui/**/*.html", "./ui/**/*.gohtml"],
   theme: {
     colors: {
       offWhite: "#f8f8f8", // Adjust the color code as needed
