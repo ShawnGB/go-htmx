@@ -8,10 +8,15 @@ import (
 )
 
 func main() {
+
+	handlers.LoadTemplates()
+
 	// Serve static files from the "static" directory
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	http.HandleFunc("/", handlers.Base)
+	// Routes
+	http.HandleFunc("/", handlers.IndexHandler)
+
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
